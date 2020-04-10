@@ -8,7 +8,7 @@ from opaque_keys.edx.keys import CourseKey, UsageKey  # pylint: disable=import-e
 from xmodule.modulestore.django import modulestore  # pylint: disable=import-error
 
 
-@task(name='poll.tasks.export_csv_data')
+@task()
 def export_csv_data(block_id, course_id):
     """
     Exports student answers to all supported questions to a CSV file.
