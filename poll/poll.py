@@ -132,7 +132,7 @@ class CSVExportMixin(object):
         Asynchronously export given data as a CSV file.
         """
         # Launch task
-        from .tasks import export_csv_data  # Import here since this is edX LMS specific
+        from poll.tasks import export_csv_data  # Import here since this is edX LMS specific
 
         # Make sure we nail down our state before sending off an asynchronous task.
         async_result = export_csv_data.delay(
